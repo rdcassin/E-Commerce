@@ -25,7 +25,6 @@ img {
   width: 100%;
   height: 100%;
   max-height: 50vh;
-
 }
 
 p {
@@ -86,6 +85,57 @@ li {
 .nav__link--primary:hover {
   text-decoration: none;
 }
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  border: none;
+  color: #7342d6;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: #242424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.menu--open .menu__backdrop {
+  display: flex;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  font-size: 40px;
+  color: white;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: white;
+}
+
+/* LANDING */
 
 #landing {
   background-color: rgba(115, 66, 214, 0.1);
@@ -271,7 +321,6 @@ button:active {
 .book__title {
   font-size: 20px;
   margin-bottom: 8px;
-
 }
 
 .book__title:hover {
@@ -322,4 +371,10 @@ footer {
 
 .footer__link {
   padding: 0 8px;
+}
+
+@media (max-width: 550px) {
+  .nav__links {
+    display: none;
+  }
 }
